@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+*.conda/
+
+# ArcGIS / geospatial generated data
+*.gdb/
+*.sde
+*.sd
+*.sdDraft
+*.aprx
+*.aprx.lock
+*.lyrx
+*.lpkx
+*.mpkx
+*.ppkx
+*.tpkx
+*.vtpk
+*.geodatabase
+
+# Large downloaded/working raster and point-cloud products
+*.tif
+*.tiff
+*.img
+*.las
+*.laz
+*.copc.laz
+*.dem
+*.bil
+*.bip
+*.bsq
+
+# Runtime outputs
+HGAC_Contours_batch_*/
+HGAC_Contours/
+_dem_cache/
+_seamless_work/
+reports/
+run_manifest.csv
+run_manifest.json
+resolved_dem_inputs.json
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+~$*
+Thumbs.db
+.DS_Store
+
+# IDE/editor
+.vscode/
+.idea/

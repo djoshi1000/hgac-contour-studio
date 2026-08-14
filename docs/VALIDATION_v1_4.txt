@@ -1,0 +1,23 @@
+HGAC Contour Studio v1.4 validation
+====================================
+
+Completed in the development environment:
+- Python compilation: PASS (GUI, single-tile ArcGIS worker, seamless batch ArcGIS worker, tests)
+- Existing tile normalization / USGS index parsing / local bare-earth selection tests: PASS
+- Existing required delivery-field regression tests: PASS
+- Seamless adjacency grouping regression: PASS
+  * touching raster extents grouped together
+  * distant raster extents remain separate
+- Batch worker source contains MosaicToNewRaster stage: PASS
+- Batch worker creates run-wide 2-ft/5-ft naming path: PASS
+- Per-tile clipping from run-wide contours present: PASS
+- Tk GUI startup under virtual display: PASS
+- Default keep-working-mosaics setting: OFF
+
+Not executable in this Linux development environment:
+- ArcGIS Pro 3.5.2 MosaicToNewRaster
+- Spatial Analyst / 3D Analyst Contour
+- PairwiseClip / Clip against actual Houston DEMs
+
+Recommended first Windows validation:
+Run two known adjacent Houston B24 tiles. Display RUN_Contours_2FT and the two corresponding per-tile 2-ft layers together. Verify that per-tile line endpoints meet exactly at the shared boundary and that RUN_Contours_2FT has no artificial tile seam.

@@ -1,0 +1,19 @@
+HGAC USGS Contour GUI v1.1 validation
+Date: 2026-08-14
+
+Passed in packaging environment:
+- Python syntax compilation: GUI + ArcGIS worker + tests
+- Tile normalization tests
+- Multi-format tile-list parsing tests
+- USGS link-list exact TIFF matching test
+- Local bare-earth ranking and intensity rejection test
+- Static validation that worker contains required delivery fields
+- Static validation that worker performs temporary -> populated -> verified -> final CopyFeatures workflow
+- GUI manifest includes attribute verification and per-interval feature counts
+
+Not executable in this environment:
+- ArcGIS Pro / arcpy.ddd.Contour
+- ArcPy FGDB field creation/update/copy verification
+- Live download from USGS prd-tnm S3 endpoint
+
+These ArcGIS-dependent stages must be validated on the Windows ArcGIS Pro workstation.
